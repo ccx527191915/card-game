@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C230857-9A8F-4F44-A08C-750503BAC06A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF5, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addgold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addgold.Designer.cs">
+      <DependentUpon>addgold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase.Designer.cs">
+      <DependentUpon>purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign.Designer.cs">
+      <DependentUpon>sign.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addgold.resx">
+      <DependentUpon>addgold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="purchase.resx">
+      <DependentUpon>purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign.resx">
+      <DependentUpon>sign.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\01呼保义宋江.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02玉麒麟卢俊义.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03智多星吴用.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04入云龙公孙胜.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05大刀关胜.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\06豹子头林冲.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07霹雳火秦明.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\08双鞭呼延灼.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\09小李广花荣.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10小旋风柴进.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11扑天雕李应.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12美髯公朱仝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13花和尚鲁智深.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14行者武松.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15双枪将董平.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16没羽箭张清.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17青面兽杨志.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18金枪手徐宁.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19急先锋索超.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20神行太保戴宗.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21赤发鬼刘唐.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22黑旋风李逵.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23九纹龙史进.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24没遮拦穆弘.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25插翅虎雷横.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26混江龙李俊.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27立地太岁阮小二.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28船火儿张横.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29短命二郎阮小五.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30浪里白条张顺.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31活阎罗阮小七.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32病关索杨雄.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33拼命三郎石秀.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34双头蛇解珍.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35双尾蝎解宝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36浪子燕青.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37神机军师朱武.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38镇三山黄信.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39病尉迟孙立.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40丑郡马宣赞.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41井木犴郝思文.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42百胜将韩滔.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43天目将彭玘.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44圣水将单廷圭.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45神火将魏定国.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46圣手书生萧让.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47铁面孔目裴宣.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48摩云金翅欧鹏.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49火眼狻猊邓飞.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50锦毛虎燕顺.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51锦豹子杨林.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52轰天雷凌振.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53神算子蒋敬.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54小温候吕方.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55赛仁贵郭盛.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56神医安道全.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57紫髯伯黄甫端.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58矮脚虎王英.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\59一丈青扈三娘.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60丧门神鲍旭.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61混世魔王樊瑞.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62毛头星孔明.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\63独火星孔亮.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64八臂哪吒项充.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65飞天大圣李衮.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66玉臂匠金大坚.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\67铁笛仙马麟.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\68出洞蛟童威.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\69翻江蜃童猛.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70玉蟠杆孟康.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71通臂猿候健.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72跳涧虎陈达.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\73白花蛇杨春.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74白面郎君郑天寿.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75九尾龟陶宗旺.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76铁扇子宋清.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77铁叫子乐和.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78花项虎龚旺.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79中箭虎丁得孙.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80小遮拦穆春.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81操刀鬼曹正.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\82云里金刚宋万.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83摸着天杜迁.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\84病大虫薛永.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85金眼彪施恩.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\86打虎将李忠.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87小霸王周通.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\88金钱豹子汤隆.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\89鬼脸儿杜兴.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90出林龙邹渊.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91独角龙邹润.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92旱地忽律朱贵.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93笑面虎朱富.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\94铁臂膊蔡福.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\95一枝花蔡庆.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\96催命判官李立.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\97青眼虎李云.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\98没面目焦挺.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99石将军石勇.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100小尉迟孙新.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101母大虫顾大嫂.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102菜园子张青.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103母夜叉孙二娘.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104活闪婆王定六.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105险道神郁保四.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106白日鼠白胜.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107鼓上蚤时迁.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\108金毛犬段景住.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
