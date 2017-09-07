@@ -57,6 +57,12 @@
       <DependentUpon>addgold.cs</DependentUpon>
     </Compile>
     <Compile Include="data.cs" />
+    <Compile Include="favorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="favorites.Designer.cs">
+      <DependentUpon>favorites.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="addgold.resx">
       <DependentUpon>addgold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="favorites.resx">
+      <DependentUpon>favorites.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

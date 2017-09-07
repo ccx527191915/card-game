@@ -21,6 +21,8 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string username="";
+            Boolean signsuccess = false;
             userNick = user_nick.Text.ToString();
             if (user_nick.Text.ToString() == "")
             {
@@ -63,6 +65,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
+                    username = user_name.Text.ToString();
                     myDRWYL.Close();
                     string conAddUser = "Insert into userinfo (user_name,user_password,user_nick) values (@username,@userpassword,@usernick)";
                     MySqlCommand mycmdWYL2 = new MySqlCommand(conAddUser, mycon);
@@ -75,10 +78,15 @@ namespace WindowsFormsApplication1
                         }
                         );
                     mycmdWYL2.ExecuteNonQuery();
-                    MessageBox.Show("注册成功", "注册成功");
+                    MessageBox.Show("注册成功", "注册成功");                  
+                    signsuccess = true;
                     this.Close();
                 }
                 mycon.Close();
+            }
+            if (signsuccess)
+            {
+                data.cardinit(username, "水浒");
             }
         }
     }

@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             textBox1.Text = usergolden.ToString();
             label8.Text = userpackage.ToString();
+            label11.Text = login.userName;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,9 +28,10 @@ namespace WindowsFormsApplication1
 
         private void image1_Click(object sender, EventArgs e)
         {
+            int i = 0;
             if (!data.bl[0])
             {
-                data.getResource(image1, label1);
+                i=data.getResource(image1, label1);
                 data.bl[0] = true;
             }
         }
@@ -128,6 +130,15 @@ namespace WindowsFormsApplication1
             ag.onSel += new WindowsFormsApplication1.addgold.Mysel(addgold_onSel);
             ag.Show();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            //data.insertcard();
+            data.getplayercard(login.userName);
+            favorites fav = new favorites();
+            fav.Show();
+        }
+
         private void addgold_onSel(int gold)
         {
             textBox1.Text = gold.ToString();
